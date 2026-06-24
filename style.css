@@ -94,7 +94,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 120px 20px 0;
+  padding: 20px 0;
 }
 
 .hero-content h1 {
@@ -268,11 +268,6 @@ textarea:focus {
     flex-direction: column;
     gap: 15px;
   }
-
-  .hero {
-    padding-top: 180px;
-  }
-
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
@@ -423,12 +418,41 @@ textarea {
   transform: translateY(-10px);
 }
 @media (max-width: 768px) {
-  .hero {
-    margin-top: 120px;
-    min-height: 100vh;
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
   }
 
-  .hero-content {
-    margin-top: 40px;
+  .logo {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+
+  .hero {
+    margin-top: 30px;
   }
 }
