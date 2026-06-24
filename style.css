@@ -94,7 +94,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 120px 20px 0;
 }
 
 .hero-content h1 {
@@ -267,11 +267,10 @@ textarea:focus {
   .navbar {
     flex-direction: column;
     gap: 15px;
-    padding: 15px;
   }
 
-  .logo {
-    margin-bottom: 15px;
+  .hero {
+    padding-top: 180px;
   }
 
   .nav-links {
@@ -422,4 +421,14 @@ textarea {
 
 .beer-card:hover {
   transform: translateY(-10px);
+}
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 120px;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    margin-top: 40px;
+  }
 }
