@@ -1,0 +1,420 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #111;
+  color: #fff;
+}
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #111111;
+  border-bottom: 2px solid #ffb703;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: bold;
+  color: #ffb703;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Hover/Touch state for the menu bar links */
+.nav-links a:hover {
+  color: #ffb400;
+  border-bottom: 2px solid #ffb400;
+  padding-bottom: 5px;
+}
+
+.cart-icon a {
+  text-decoration: none;
+  color: white;
+  background: #333;
+  font-size: 22px;
+  padding: 12px 25px;
+  border-radius: 20px;
+  border: 1px solid #ffb703;
+  transition: background 0.3s;
+}
+
+.cart-icon a:hover {
+  background: #ffb703;
+  color: #000;
+}
+
+.cart-count {
+  background-color: #fb8500;
+  color: white;
+  padding: 1px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://images.unsplash.com/photo-1532634922-8fe0b757fb13?q=80&w=1472")
+      center/cover;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  color: #ffb703;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.hero-content p {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ffb703;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #fb8500;
+  transform: translateY(-2px);
+}
+
+/* Menu Layout for 20 Items */
+.menu-container {
+  padding: 60px 10%;
+}
+.menu-container > .beer-card {
+  max-width: 700px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #ffb703;
+}
+
+/* Grid automatically handles sizing on mobile and desktop */
+.beer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* Beer Item Cards */
+.beer-card {
+  background: #1d1d1d;
+  color: #fff;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Touch/Hover effect to highlight specific card */
+.beer-card:hover {
+  transform: translateY(-10px);
+  border-color: #ffb703;
+  box-shadow: 0 10px 25px rgba(255, 183, 3, 0.2);
+}
+.beer-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.beer-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #ffb400;
+}
+.description {
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.price {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffb703;
+  margin-bottom: 20px;
+}
+
+/* Add to Cart Button Styling */
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  border: 2px solid #ffb703;
+  color: #ffb703;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ffb703;
+  color: #000;
+}
+
+/* Footer Section */
+.footer {
+  background: #0d0d0d;
+  padding: 40px;
+  text-align: center;
+  margin-top: 80px;
+  border-top: 2px solid #ffb400;
+}
+
+.footer h3 {
+  color: #ffb400;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: #ccc;
+  margin: 8px 0;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+input,
+textarea {
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 180px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ffb703;
+}
+
+.beer-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+/* Hero Fix */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+/* About Section */
+
+#about .beer-card {
+  text-align: left;
+  line-height: 1.8;
+  max-width: 900px;
+  padding: 50px;
+  margin: auto;
+}
+/* Contact Form */
+
+textarea {
+  resize: none;
+  min-height: 120px;
+}
+#contact .beer-card {
+  max-width: 900px;
+  margin: auto;
+}
+
+.section-title {
+  margin-top: 80px;
+}
+
+#gallery .beer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+#gallery .beer-card {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+#gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+#gallery h3 {
+  padding: 15px;
+}
+.menu-container .beer-card h2 {
+  color: #ffb703;
+  margin-bottom: 15px;
+}
+
+.menu-container .beer-card p {
+  line-height: 1.8;
+}
+
+.menu-container .btn {
+  margin-top: 15px;
+}
+.beer-grid .beer-card {
+  height: 100%;
+}
+.beer-card {
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .cart-icon a {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  #gallery img {
+    height: 180px;
+  }
+}
+.btn {
+  box-shadow: 0 4px 15px rgba(255, 183, 3, 0.3);
+}
+
+.btn:hover {
+  box-shadow: 0 8px 20px rgba(255, 183, 3, 0.5);
+}
+#gallery .beer-card {
+  background: #181818;
+  border: 1px solid #2a2a2a;
+}
+
+#gallery .beer-card:hover {
+  border-color: #ffb703;
+}
+.footer {
+  background: #0d0d0d;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 16px;
+  color: #999;
+}
+.hero-content {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.beer-card {
+  backdrop-filter: blur(10px);
+}
+
+.beer-card:hover {
+  transform: translateY(-10px);
+}
